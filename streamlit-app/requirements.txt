@@ -5,3 +5,4 @@ shap
 numpy
 matplotlib
 fancyimpute==0.7.0
+scikit-learn==1.2.2
