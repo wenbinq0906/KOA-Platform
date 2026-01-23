@@ -4,3 +4,4 @@ joblib
 shap
 numpy
 matplotlib
+fancyimpute==0.7.0
