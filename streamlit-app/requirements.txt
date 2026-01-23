@@ -4,4 +4,3 @@ joblib
 shap
 numpy
 matplotlib
-scikit-learn==1.2.2
