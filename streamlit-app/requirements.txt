@@ -1,8 +1,10 @@
-streamlit
-pandas
-joblib
-shap
-numpy
-matplotlib
-fancyimpute==0.7.0
+streamlit>=1.30
+
+numpy==1.26.4
+pandas==2.1.4
+
 scikit-learn==1.2.2
+fancyimpute==0.7.0
+
+shap==0.47.0
+joblib>=1.2
