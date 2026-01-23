@@ -8,3 +8,6 @@ fancyimpute==0.7.0
 
 shap==0.47.0
 joblib==1.2.0
+
+xgboost
+lightgbm
