@@ -96,7 +96,7 @@ if predict_button:
         st.session_state["result_df_2"] = result_df
         
 if "result_df_2" in st.session_state:
-   st.success("风险评估完成")
+   st.success("风险评估完成，详情请见“风险概率”列")
 
    #显示结果表
    show_result_df=st.session_state["result_df_2"].copy()
