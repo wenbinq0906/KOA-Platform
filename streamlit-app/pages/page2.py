@@ -91,7 +91,7 @@ if predict_button:
         risk_prob = ensemble_model.predict_proba(X_test_scaled)[:,1]
         
         #save results
-        result_df = test_df.copy()
+        result_df = test_set.copy()
         result_df["风险概率"] = risk_prob
         st.session_state["result_df_2"] = result_df
         
