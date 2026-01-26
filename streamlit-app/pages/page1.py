@@ -228,8 +228,7 @@ if "result_df_1" in st.session_state:
    cols = list(show_result_df.columns)
    cols.remove("风险概率")
    cols.insert(1, "风险概率")   # 第 3 列（0-based）
-   show_result_df = show_result_df[cols].style.set_properties(subset=["风险概率"],
-                                                              **{"background-color": "yellow"})
+   show_result_df = show_result_df[cols]
    st.dataframe(show_result_df,hide_index=True,width="content")
 
    
