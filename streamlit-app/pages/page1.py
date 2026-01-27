@@ -228,7 +228,7 @@ if "result_df_1" in st.session_state:
    cols.insert(1, "风险概率")   # 第 3 列（0-based）
    from matplotlib.colors import LinearSegmentedColormap
    single_color_cmap = LinearSegmentedColormap.from_list(
-    "same_color", ["#fbfad0", "#fbfad0"])
+    "same_color", ["#fbfbda", "#fbfbda"])
    show_result_df = show_result_df[cols].style.background_gradient(subset=["风险概率"],cmap=single_color_cmap)
    st.dataframe(show_result_df,hide_index=True,width="content")
 
