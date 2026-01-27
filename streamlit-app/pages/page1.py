@@ -34,7 +34,7 @@ patient_name = st.text_input("病人姓名或编号：")
 col1, col2 = st.columns(2)
 # patient gender
 with col1:
-    patient_gender = st.selectbox("病人的性别：", ["男", "女"])
+    patient_gender = st.selectbox("病人性别：", ["男", "女"])
 # patient age
 with col2:
     patient_age = st.number_input("年龄（岁）",min_value=0,max_value=120)
@@ -62,6 +62,7 @@ with col1:
     patient_Total_bilirubin = st.number_input("总胆红素 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Urate = st.number_input("尿酸 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Urea = st.number_input("尿素 (mmol/L)", value=None,step=0.01,format="%.2f")
+    patient_Triglycerides = st.number_input("甘油三脂 (mmol/L)", value=None,step=0.01,format="%.2f")
 
 with col2:
     patient_Basophil_percentage = st.number_input("嗜碱性粒细胞比率 (%)", value=None,step=0.01,format="%.2f")
@@ -101,7 +102,7 @@ with col3:
     patient_Glucose = st.number_input("葡萄糖测定 (mmol/L)", value=None,step=0.01,format="%.2f")
     patient_Rheumatoid_factor = st.number_input("类风湿因子 (IU/mL)", value=None,step=0.01,format="%.2f")
     patient_Phosphate = st.number_input("磷 (mmol/L)", value=None,step=0.01,format="%.2f")
-    patient_Triglycerides = st.number_input("甘油三脂 (mmol/L)", value=None,step=0.01,format="%.2f")
+    
 
 st.info("如有缺失值可直接留空，请注意各项指标的输入单位。")    
 st.divider()
@@ -227,7 +228,7 @@ if "result_df_1" in st.session_state:
    cols.insert(1, "风险概率")   # 第 3 列（0-based）
    from matplotlib.colors import LinearSegmentedColormap
    single_color_cmap = LinearSegmentedColormap.from_list(
-    "same_color", ["#FFD54F", "#FFD54F"])
+    "same_color", ["#fbfad0", "#fbfad0"])
    show_result_df = show_result_df[cols].style.background_gradient(subset=["风险概率"],cmap=single_color_cmap)
    st.dataframe(show_result_df,hide_index=True,width="content")
 

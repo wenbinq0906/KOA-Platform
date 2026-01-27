@@ -104,7 +104,10 @@ if "result_df_2" in st.session_state:
    cols = list(show_result_df.columns)
    cols.remove("风险概率")
    cols.insert(1, "风险概率")   # 第 3 列（0-based）
-   show_result_df = show_result_df[cols].reset_index()
+   from matplotlib.colors import LinearSegmentedColormap
+   single_color_cmap = LinearSegmentedColormap.from_list(
+    "same_color", ["#fbfad0", "#fbfad0"])
+   show_result_df = show_result_df[cols].reset_index().style.background_gradient(subset=["风险概率"],cmap=single_color_cmap)
    st.dataframe(show_result_df,hide_index=True,width="content")
 
    #下载结果
