@@ -89,7 +89,7 @@ name_mapping = {
 matrix_df_renamed = matrix_df_filtered.rename(columns=name_mapping)
 
 #read gene function reference
-gene_function_df= pd.read_csv(gene_function_dir, index_col=0, encoding="gbk")
+gene_function_df= pd.read_csv(gene_function_dir, index_col=0, encoding="utf-8-sig")
 
 #title
 st.title("血液指标相关基因查询")
@@ -112,4 +112,5 @@ if blood_indice:
                      )
         merged_result_df = pd.merge(result_df, gene_function_df,left_index=True)
         st.dataframe(merged_result_df,hide_index=True,width='content')
+
         
