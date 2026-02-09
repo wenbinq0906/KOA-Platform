@@ -15,6 +15,7 @@ st.set_page_config(layout="wide")
 from pathlib import Path
 base_dir = Path(__file__).resolve().parents[1]  # streamlit-app
 matrix_dir = base_dir / "data_example" / "Matrix.csv"
+gene_function_dir = base_dir / "data_example" / "Gene_function.xlsx"
 
 #read reference
 matrix_df = pd.read_csv(matrix_dir, index_col=0)
@@ -87,6 +88,9 @@ name_mapping = {
 }
 matrix_df_renamed = matrix_df_filtered.rename(columns=name_mapping)
 
+#read gene function reference
+gene_function_df= pd.read_csv(gene_function_dir, index_col=0)
+
 #title
 st.title("血液指标相关基因查询")
 st.divider()
@@ -106,5 +110,6 @@ if blood_indice:
                      drop(columns=blood_indice).
                      rename(columns={"index": "关联基因"})
                      )
-        st.dataframe(result_df,hide_index=True,width='content')
+        merged_result_df = pd.merge(result_df, gene_function_df,left_index=True)
+        st.dataframe(merged_result_df,hide_index=True,width='content')
         
