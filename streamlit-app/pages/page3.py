@@ -89,7 +89,7 @@ name_mapping = {
 matrix_df_renamed = matrix_df_filtered.rename(columns=name_mapping)
 
 #read gene function reference
-gene_function_df= pd.read_xml(gene_function_dir, index_col=0)
+gene_function_df= pd.read_csv(gene_function_dir, index_col=0)
 
 #title
 st.title("血液指标相关基因查询")
