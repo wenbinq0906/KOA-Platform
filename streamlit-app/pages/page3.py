@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
 from pathlib import Path
 base_dir = Path(__file__).resolve().parents[1]  # streamlit-app
 matrix_dir = base_dir / "data_example" / "Matrix.csv"
-gene_function_dir = base_dir / "data_example" / "Gene_function.xlsx"
+gene_function_dir = base_dir / "data_example" / "Gene_function.csv"
 
 #read reference
 matrix_df = pd.read_csv(matrix_dir, index_col=0)
@@ -114,3 +114,4 @@ if blood_indice:
         st.dataframe(merged_result_df,hide_index=True,width='content')
 
         
+
