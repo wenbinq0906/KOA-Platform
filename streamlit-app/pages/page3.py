@@ -110,8 +110,6 @@ if blood_indice:
                      drop(columns=blood_indice).
                      rename(columns={"index": "关联基因"})
                      )
-        merged_result_df = pd.merge(result_df, gene_function_df,left_index=True)
+        merged_result_df = pd.merge(result_df, gene_function_df,on="关联基因")
         st.dataframe(merged_result_df,hide_index=True,width='content')
-
         
-
