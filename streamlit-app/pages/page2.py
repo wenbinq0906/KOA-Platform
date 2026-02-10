@@ -144,7 +144,7 @@ if "result_df_2" in st.session_state:
 
    #plot
    force_plot = shap.plots.force(base_value=explainer.expected_value,
-                   shap_values=shap_value,
+                   shap_values=np.round(shap_value,2),
                    features=np.round(st.session_state["X_test_2"].iloc[row_pos],2),
                    feature_names=st.session_state["X_test_scaled_2"].columns,
                    plot_cmap=["#ff4777", "#00e079"])
@@ -158,3 +158,4 @@ if "result_df_2" in st.session_state:
        st.download_button(label='下载图片',data=html_str,
                       file_name=f"shap_force_plot_{sample_id}.html",
                       type="primary")
+
