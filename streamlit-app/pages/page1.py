@@ -55,14 +55,10 @@ with col1:
     patient_White_blood_cell_count = st.number_input("白细胞 (10^9/L)", value=None,step=0.01,format="%.2f")
     patient_Alkaline_phosphatase = st.number_input("碱性磷酸酶 (U/L)", value=None,step=0.01,format="%.2f")
     patient_Aspartate_aminotransferase = st.number_input("天门冬氨酸氨基转移酶 (U/L)", value=None,step=0.01,format="%.2f")
-    patient_Cholesterol = st.number_input("总胆固醇 (mmol/L)", value=None,step=0.01,format="%.2f")
     patient_Direct_bilirubin = st.number_input("直接胆红素 (umol/L)", value=None,step=0.01,format="%.2f")
-    patient_Glycated_haemoglobin = st.number_input("糖化血红蛋白 (%)", value=None,step=0.01,format="%.2f")
-    patient_LDL_direct = st.number_input("低密度脂蛋白胆固醇 (mmol/L)", value=None,step=0.01,format="%.2f")
     patient_Total_bilirubin = st.number_input("总胆红素 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Urate = st.number_input("尿酸 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Urea = st.number_input("尿素 (mmol/L)", value=None,step=0.01,format="%.2f")
-    patient_Triglycerides = st.number_input("甘油三脂 (mmol/L)", value=None,step=0.01,format="%.2f")
 
 with col2:
     patient_Basophil_percentage = st.number_input("嗜碱性粒细胞比率 (%)", value=None,step=0.01,format="%.2f")
@@ -71,16 +67,11 @@ with col2:
     patient_Lymphocyte_percentage = st.number_input("淋巴细胞比率 (%)", value=None,step=0.01,format="%.2f")
     patient_Mean_corpuscular_volume = st.number_input("红细胞平均体积 (fL)", value=None,step=0.01,format="%.2f")
     patient_Neutrophil_count = st.number_input("中性粒细胞数 (10^9/L)", value=None,step=0.01,format="%.2f")
-    patient_Nucleated_red_blood_cell_percentage = st.number_input("有核红细胞比例 (%)", value=None,step=0.01,format="%.2f")
     patient_Platelet_distribution_width = st.number_input("血小板分布宽度 (fL)", value=None,step=0.01,format="%.2f")
     patient_Reticulocyte_count = st.number_input("网织红细胞计数 (10^9/L)", value=None,step=0.01,format="%.2f")
     patient_Alanine_aminotransferase = st.number_input("丙氨酸氨基转移酶 (U/L)", value=None,step=0.01,format="%.2f")
-    patient_Apolipoprotein_A = st.number_input("载脂蛋白A (g/L)", value=None,step=0.01,format="%.2f")
-    patient_C_reactive_protein = st.number_input("C-反应蛋白 (mg/L)", value=None,step=0.01,format="%.2f")
     patient_Creatinine = st.number_input("肌酐 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Gamma_glutamyltransferase = st.number_input("γ-谷氨酰基转移酶 (U/L)", value=None,step=0.01,format="%.2f")
-    patient_HDL_cholesterol = st.number_input("高密度脂蛋白胆固醇 (mmol/L)", value=None,step=0.01,format="%.2f")
-    patient_Lipoprotein_A = st.number_input("脂蛋白(a) (nmol/L)", value=None,step=0.01,format="%.2f")
     patient_Total_protein = st.number_input("总蛋白 (g/L)", value=None,step=0.01,format="%.2f")
     
 
@@ -96,11 +87,9 @@ with col3:
     patient_Red_blood_cell_count = st.number_input("红细胞 (10^12/L)", value=None,step=0.01,format="%.2f")
     patient_Reticulocyte_percentage = st.number_input("网织红细胞百分比 (%)", value=None,step=0.01,format="%.2f")
     patient_Albumin = st.number_input("白蛋白 (g/L)", value=None,step=0.01,format="%.2f")
-    patient_Apolipoprotein_B = st.number_input("载脂蛋白B (g/L)", value=None,step=0.01,format="%.2f")
     patient_Calcium = st.number_input("钙 (mmol/L)", value=None,step=0.01,format="%.2f")
     patient_Cystatin_C = st.number_input("胱抑素C (mg/L)", value=None,step=0.01,format="%.2f")
     patient_Glucose = st.number_input("葡萄糖测定 (mmol/L)", value=None,step=0.01,format="%.2f")
-    patient_Rheumatoid_factor = st.number_input("类风湿因子 (IU/mL)", value=None,step=0.01,format="%.2f")
     patient_Phosphate = st.number_input("磷 (mmol/L)", value=None,step=0.01,format="%.2f")
     
 
@@ -142,8 +131,6 @@ input_dict = {
     "网织红细胞百分比": patient_Reticulocyte_percentage,
     "高荧光网红比值": patient_High_light_scattervreticulocyte_percentage,
     "未成熟网红比值": patient_Immature_reticulocyte_fraction,
-    "糖化血红蛋白":patient_Glycated_haemoglobin,
-    "有核红细胞比例":patient_Nucleated_red_blood_cell_percentage,
 
     "白蛋白": patient_Albumin,
     "总蛋白": patient_Total_protein,
@@ -159,16 +146,7 @@ input_dict = {
     "碱性磷酸酶": patient_Alkaline_phosphatase,
     "γ-谷氨酰基转移酶": patient_Gamma_glutamyltransferase,
     "总胆红素": patient_Total_bilirubin,
-    "直接胆红素": patient_Direct_bilirubin,
-    "总胆固醇": patient_Cholesterol,
-    "甘油三脂": patient_Triglycerides,
-    "高密度脂蛋白胆固醇": patient_HDL_cholesterol,
-    "低密度脂蛋白胆固醇": patient_LDL_direct,
-    "载脂蛋白A": patient_Apolipoprotein_A,
-    "载脂蛋白B": patient_Apolipoprotein_B,
-    "脂蛋白(a)": patient_Lipoprotein_A,
-    "C-反应蛋白": patient_C_reactive_protein,
-    "类风湿因子": patient_Rheumatoid_factor,
+    "直接胆红素": patient_Direct_bilirubin
 }    
 
 #predict    
@@ -251,7 +229,7 @@ if "result_df_1" in st.session_state:
    rcParams['axes.unicode_minus'] = False
 
    #plot
-   force_plot = shap.plots.force(base_value=explainer.expected_value,
+   force_plot = shap.plots.force(base_value=np.round(explainer.expected_value,2),
                    shap_values=shap_values[0],
                    features=np.round(st.session_state["X_test_1"].iloc[0,:],2),
                    feature_names=st.session_state["X_test_scaled_1"].columns,

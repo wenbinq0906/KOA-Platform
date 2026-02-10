@@ -158,5 +158,3 @@ if "result_df_2" in st.session_state:
        st.download_button(label='下载图片',data=html_str,
                       file_name=f"shap_force_plot_{sample_id}.html",
                       type="primary")
-
-
