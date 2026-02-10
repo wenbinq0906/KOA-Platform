@@ -73,7 +73,8 @@ with col2:
     patient_Creatinine = st.number_input("肌酐 (umol/L)", value=None,step=0.01,format="%.2f")
     patient_Gamma_glutamyltransferase = st.number_input("γ-谷氨酰基转移酶 (U/L)", value=None,step=0.01,format="%.2f")
     patient_Total_protein = st.number_input("总蛋白 (g/L)", value=None,step=0.01,format="%.2f")
-    
+    patient_Glucose = st.number_input("葡萄糖测定 (mmol/L)", value=None,step=0.01,format="%.2f")
+    patient_Phosphate = st.number_input("磷 (mmol/L)", value=None,step=0.01,format="%.2f")
 
 with col3:
     patient_Eosinophil_count = st.number_input("嗜酸性粒细胞数 (10^9/L)", value=None,step=0.01,format="%.2f")
@@ -89,8 +90,7 @@ with col3:
     patient_Albumin = st.number_input("白蛋白 (g/L)", value=None,step=0.01,format="%.2f")
     patient_Calcium = st.number_input("钙 (mmol/L)", value=None,step=0.01,format="%.2f")
     patient_Cystatin_C = st.number_input("胱抑素C (mg/L)", value=None,step=0.01,format="%.2f")
-    patient_Glucose = st.number_input("葡萄糖测定 (mmol/L)", value=None,step=0.01,format="%.2f")
-    patient_Phosphate = st.number_input("磷 (mmol/L)", value=None,step=0.01,format="%.2f")
+    
     
 
 st.info("如有缺失值可直接留空，请注意各项指标的输入单位。")    
